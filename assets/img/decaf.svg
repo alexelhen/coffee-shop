@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <defs>
+    <filter id="grain88" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="4" seed="88"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <radialGradient id="light88" cx="38%" cy="22%" r="78%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="400" height="500" fill="#e6e0d7"/>
+  <rect y="372" width="400" height="128" fill="#d4ccc0"/>
+  <rect width="400" height="500" fill="url(#light88)"/>
+
+  <ellipse cx="206" cy="382" rx="112" ry="15" fill="#2b2320" opacity="0.13"/>
+
+  <g transform="rotate(0.5 200 250)">
+    <rect x="152" y="188" width="104" height="180" rx="12" fill="#cfc6b6" opacity="0.55"/>
+    <rect x="160" y="252" width="88" height="110" rx="8" fill="#6b5a49"/>
+    <circle cx="180" cy="276" r="7" fill="#5a4a3b"/>
+    <circle cx="208" cy="266" r="7" fill="#7a6957"/>
+    <circle cx="232" cy="282" r="7" fill="#5a4a3b"/>
+    <circle cx="196" cy="296" r="7" fill="#80705e"/>
+    <rect x="146" y="168" width="116" height="26" rx="5" fill="#8d7f6d"/>
+    <rect x="150" y="162" width="108" height="10" rx="4" fill="#766a59"/>
+  <rect x="158" y="206" width="92" height="66" rx="3" fill="#f4f0e8"/>
+  <text x="204.0" y="232" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="1.2" fill="#4a4036">DECAF</text>
+  <line x1="170" y1="243" x2="238" y2="243" stroke="#4a4036" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="204.0" y="260" text-anchor="middle" font-family="Courier New, monospace" font-size="8.5" letter-spacing="0.5" fill="#4a4036" fill-opacity="0.75">MEXICO / H2O</text>
+  </g>
+
+
+  <rect width="400" height="500" filter="url(#grain88)" opacity="0.1" style="mix-blend-mode:multiply"/>
+</svg>
