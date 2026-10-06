@@ -9,7 +9,7 @@
 <body>
 
   <header class="header">
-    <div class="container header__inner">
+    <div class="container header-inner">
       <a class="logo" href="#top">Зерно</a>
 
       <nav class="nav">
@@ -17,9 +17,9 @@
         <a href="#about">Обжарка</a>
       </nav>
 
-      <button class="cart-button" type="button" data-action="open-cart">
+      <button class="cart-button" type="button" id="openCart">
         Корзина
-        <span class="cart-button__count" data-cart-count>0</span>
+        <span class="cart-count" id="cartCount">0</span>
       </button>
     </div>
   </header>
@@ -27,35 +27,35 @@
   <main id="top">
 
     <section class="hero">
-      <div class="container hero__inner">
+      <div class="container hero-inner">
 
-        <div class="hero__main">
-          <h1 class="hero__title">Кофе<br>свежей<br>обжарки</h1>
-          <p class="hero__text">
+        <div class="hero-main">
+          <h1 class="hero-title">Кофе<br>свежей<br>обжарки</h1>
+          <p class="hero-text">
             Берём зелёное зерно небольшими партиями, жарим на ростере в пять
             килограммов и ставим дату на пачке. Что не продали за три недели,
             уезжает в кофейню на Кожевнической, а не лежит на складе.
           </p>
         </div>
 
-        <dl class="facts">
-          <div class="facts__row">
-            <dt>Последняя обжарка</dt>
-            <dd>2 октября</dd>
-          </div>
-          <div class="facts__row">
-            <dt>Отправка</dt>
-            <dd>В день заказа</dd>
-          </div>
-          <div class="facts__row">
-            <dt>Лотов в продаже</dt>
-            <dd>8</dd>
-          </div>
-          <div class="facts__row">
-            <dt>Доставка от</dt>
-            <dd>2500 ₽ бесплатно</dd>
-          </div>
-        </dl>
+        <ul class="facts">
+          <li class="facts-row">
+            <span class="meta">Последняя обжарка</span>
+            <span class="facts-value">2 октября</span>
+          </li>
+          <li class="facts-row">
+            <span class="meta">Отправка</span>
+            <span class="facts-value">В день заказа</span>
+          </li>
+          <li class="facts-row">
+            <span class="meta">Лотов в продаже</span>
+            <span class="facts-value">8</span>
+          </li>
+          <li class="facts-row">
+            <span class="meta">Доставка от</span>
+            <span class="facts-value">2500 ₽ бесплатно</span>
+          </li>
+        </ul>
 
       </div>
     </section>
@@ -63,108 +63,109 @@
     <section class="catalog" id="catalog">
       <div class="container">
 
-        <div class="catalog__head">
+        <div class="catalog-head">
           <h2 class="section-title">Каталог</h2>
-          <p class="meta meta--dim">Цены за упаковку, зерно целое, помол под заказ</p>
+          <p class="meta dim">Цены за упаковку, зерно целое, помол под заказ</p>
         </div>
 
-        <ul class="grid" data-catalog-top>
+        <ul class="grid" id="catalogTop">
 
-          <li class="card card--featured">
-            <div class="card__media">
-              <img class="card__image" src="assets/img/ethiopia.svg" alt="Пачка кофе Эфиопия Иргачеффе">
+          <li class="card card-big">
+            <div class="card-media">
+              <img class="card-image" src="assets/img/ethiopia.svg" alt="Пачка кофе Эфиопия Иргачеффе">
             </div>
-            <div class="card__body">
+            <div class="card-body">
               <p class="meta">Выбор обжарщика · Моносорт · 250 г</p>
-              <h3 class="card__title">Эфиопия Иргачеффе</h3>
-              <p class="card__farm">Кооператив Конга, мытая обработка</p>
-              <p class="card__note">
+              <h3 class="card-title">Эфиопия Иргачеффе</h3>
+              <p class="card-farm">Кооператив Конга, мытая обработка</p>
+              <p class="card-note">
                 Лимон, чёрный чай, в остывшем чувствуется абрикос.
                 Самый яркий лот из тех, что сейчас на складе.
               </p>
-              <p class="meta meta--dim">Лот 24 · 1900 м</p>
-              <div class="card__bottom">
-                <span class="card__price">890 ₽</span>
-                <button class="button" type="button" data-action="add" data-id="1">В корзину</button>
+              <p class="meta dim">Лот 24 · 1900 м</p>
+              <div class="card-bottom">
+                <span class="card-price">890 ₽</span>
+                <button class="button add" type="button" data-id="1">В корзину</button>
               </div>
             </div>
           </li>
 
           <li class="card">
-            <div class="card__media">
-              <img class="card__image" src="assets/img/colombia.svg" alt="Пачка кофе Колумбия Уила">
+            <div class="card-media">
+              <img class="card-image" src="assets/img/colombia.svg" alt="Пачка кофе Колумбия Уила">
             </div>
-            <div class="card__body">
+            <div class="card-body">
               <p class="meta">Моносорт · 250 г</p>
-              <h3 class="card__title">Колумбия Уила</h3>
-              <p class="card__note">Молочный шоколад, грецкий орех, мягкая кислотность.</p>
-              <p class="meta meta--dim">Лот 08 · 1750 м</p>
-              <div class="card__bottom">
-                <span class="card__price">790 ₽</span>
-                <button class="button" type="button" data-action="add" data-id="2">В корзину</button>
+              <h3 class="card-title">Колумбия Уила</h3>
+              <p class="card-note">Молочный шоколад, грецкий орех, мягкая кислотность.</p>
+              <p class="meta dim">Лот 08 · 1750 м</p>
+              <div class="card-bottom">
+                <span class="card-price">790 ₽</span>
+                <button class="button add" type="button" data-id="2">В корзину</button>
               </div>
             </div>
           </li>
 
         </ul>
 
-        <aside class="band" id="about">
-          <p class="band__text">
+
+        <div class="band" id="about">
+          <p class="band-text">
             Мы не ставим в каталог лот, который не пробовали сами хотя бы в трёх
             способах заваривания. Если кофе не зашёл, напишите в течение недели:
             заберём пачку и вернём деньги, объяснять ничего не нужно.
           </p>
-          <p class="band__meta">Обжарка по вторникам и четвергам · Москва, Кожевническая 7</p>
-        </aside>
+          <p class="meta band-meta">Обжарка по вторникам и четвергам · Москва, Кожевническая 7</p>
+        </div>
 
-        <ul class="grid" data-catalog-bottom>
+        <ul class="grid" id="catalogBottom">
 
           <li class="card">
-            <div class="card__media">
-              <img class="card__image" src="assets/img/brazil.svg" alt="Пачка кофе Бразилия Серрадо">
+            <div class="card-media">
+              <img class="card-image" src="assets/img/brazil.svg" alt="Пачка кофе Бразилия Серрадо">
             </div>
-            <div class="card__body">
+            <div class="card-body">
               <p class="meta">Моносорт · 250 г</p>
-              <h3 class="card__title">Бразилия Серрадо</h3>
-              <p class="card__note">Карамель, фундук, плотное тело. Хорошо держит молоко.</p>
-              <p class="meta meta--dim">Лот 41 · 1100 м</p>
-              <div class="card__bottom">
-                <span class="card__price">690 ₽</span>
-                <button class="button" type="button" data-action="add" data-id="3">В корзину</button>
-              </div>
-            </div>
-          </li>
-
-          <li class="card card--out">
-            <div class="card__media">
-              <img class="card__image" src="assets/img/guatemala.svg" alt="Пачка кофе Гватемала Антигуа">
-              <span class="flag flag--out">нет в наличии</span>
-            </div>
-            <div class="card__body">
-              <p class="meta">Моносорт · 250 г</p>
-              <h3 class="card__title">Гватемала Антигуа</h3>
-              <p class="card__note">Какао, сухофрукты, немного специй в послевкусии.</p>
-              <p class="meta meta--dim">Лот 17 · 1600 м</p>
-              <div class="card__bottom">
-                <span class="card__price">850 ₽</span>
-                <button class="button button--off" type="button" disabled>Закончился</button>
+              <h3 class="card-title">Бразилия Серрадо</h3>
+              <p class="card-note">Карамель, фундук, плотное тело. Хорошо держит молоко.</p>
+              <p class="meta dim">Лот 41 · 1100 м</p>
+              <div class="card-bottom">
+                <span class="card-price">690 ₽</span>
+                <button class="button add" type="button" data-id="3">В корзину</button>
               </div>
             </div>
           </li>
 
           <li class="card">
-            <div class="card__media">
-              <img class="card__image" src="assets/img/kenya.svg" alt="Пачка кофе Кения Ньери">
+            <div class="card-media">
+              <img class="card-image" src="assets/img/kenya.svg" alt="Пачка кофе Кения Ньери">
               <span class="flag">осталось 3</span>
             </div>
-            <div class="card__body">
+            <div class="card-body">
               <p class="meta">Моносорт · 250 г</p>
-              <h3 class="card__title">Кения Ньери</h3>
-              <p class="card__note">Чёрная смородина, грейпфрут. Кислотность высокая, на любителя.</p>
-              <p class="meta meta--dim">Лот 03 · 1850 м</p>
-              <div class="card__bottom">
-                <span class="card__price">950 ₽</span>
-                <button class="button" type="button" data-action="add" data-id="4">В корзину</button>
+              <h3 class="card-title">Кения Ньери</h3>
+              <p class="card-note">Чёрная смородина, грейпфрут. Кислотность высокая, на любителя.</p>
+              <p class="meta dim">Лот 03 · 1850 м</p>
+              <div class="card-bottom">
+                <span class="card-price">950 ₽</span>
+                <button class="button add" type="button" data-id="4">В корзину</button>
+              </div>
+            </div>
+          </li>
+
+          <li class="card card-out">
+            <div class="card-media">
+              <img class="card-image" src="assets/img/guatemala.svg" alt="Пачка кофе Гватемала Антигуа">
+              <span class="flag flag-out">нет в наличии</span>
+            </div>
+            <div class="card-body">
+              <p class="meta">Моносорт · 250 г</p>
+              <h3 class="card-title">Гватемала Антигуа</h3>
+              <p class="card-note">Какао, сухофрукты, немного специй в послевкусии.</p>
+              <p class="meta dim">Лот 17 · 1600 м</p>
+              <div class="card-bottom">
+                <span class="card-price">850 ₽</span>
+                <button class="button button-off" type="button" disabled>Закончился</button>
               </div>
             </div>
           </li>
@@ -177,71 +178,78 @@
   </main>
 
   <footer class="footer">
-    <div class="container footer__inner">
-      <p class="footer__logo">Зерно</p>
-      <p class="meta meta--dim">Обжарка с 2021 года · Москва, Кожевническая 7 · +7 495 000 00 00</p>
+    <div class="container footer-inner">
+      <p class="footer-logo">Зерно</p>
+      <p class="meta dim">Обжарка с 2021 года · Москва, Кожевническая 7 · +7 495 000 00 00</p>
     </div>
   </footer>
 
-  <div class="overlay" data-overlay></div>
+  <div class="overlay" id="overlay"></div>
 
-  <aside class="cart" data-cart aria-label="Корзина">
-    <div class="cart__head">
-      <h2 class="cart__title">Корзина</h2>
-      <button class="cart__close" type="button" data-action="close-cart" aria-label="Закрыть корзину">×</button>
+  <aside class="cart" id="cart">
+    <div class="cart-head">
+      <h2 class="cart-title">Корзина</h2>
+      <button class="cart-close" type="button" id="closeCart">×</button>
     </div>
 
-    <p class="cart__empty" data-cart-empty>
+    <p class="cart-empty" id="cartEmpty">
       Пока пусто. Начните с «Утра», если не знаете, что выбрать.
     </p>
 
-    <ul class="cart__list" data-cart-list></ul>
+    <ul class="cart-list" id="cartList"></ul>
 
-    <div class="cart__foot">
-      <p class="cart__total">
+    <div class="cart-foot">
+      <p class="cart-total">
         <span class="meta">Итого</span>
-        <span data-cart-total>0 ₽</span>
+        <span id="cartTotal">0 ₽</span>
       </p>
-      <button class="button button--wide" type="button" data-action="checkout">Оформить заказ</button>
+      <button class="button button-wide" type="button" id="checkout">Оформить заказ</button>
     </div>
   </aside>
 
-  <dialog class="modal" data-modal>
-    <form class="order-form" data-order-form>
-      <h2 class="order-form__title">Оформление заказа</h2>
-      <p class="meta meta--dim">Перезвоним в течение часа, чтобы подтвердить адрес</p>
+  <div class="modal" id="modal">
+    <div class="modal-window">
 
-      <label class="field">
-        <span class="field__label">Имя</span>
-        <input class="field__input" type="text" name="firstName" required autocomplete="given-name">
-      </label>
+      <form class="order-form" id="orderForm">
+        <h2 class="order-title">Оформление заказа</h2>
+        <p class="meta dim">Перезвоним в течение часа, чтобы подтвердить адрес</p>
 
-      <label class="field">
-        <span class="field__label">Фамилия</span>
-        <input class="field__input" type="text" name="lastName" required autocomplete="family-name">
-      </label>
 
-      <label class="field">
-        <span class="field__label">Адрес доставки</span>
-        <input class="field__input" type="text" name="address" required autocomplete="street-address">
-      </label>
+        <label class="field">
+          <span class="field-label">Имя</span>
+          <input class="field-input" type="text" name="firstName" required>
+        </label>
 
-      <label class="field">
-        <span class="field__label">Телефон</span>
-        <input class="field__input" type="tel" name="phone" required placeholder="+7 900 000 00 00" autocomplete="tel">
-      </label>
+        <label class="field">
+          <span class="field-label">Фамилия</span>
+          <input class="field-input" type="text" name="lastName" required>
+        </label>
 
-      <div class="order-form__buttons">
-        <button class="button button--wide" type="submit">Создать заказ</button>
-        <button class="button button--ghost" type="button" data-action="close-modal">Отмена</button>
+        <label class="field">
+          <span class="field-label">Адрес доставки</span>
+          <input class="field-input" type="text" name="address" required>
+        </label>
+
+        <label class="field">
+          <span class="field-label">Телефон</span>
+          <input class="field-input" type="tel" name="phone" required placeholder="+7 900 000 00 00">
+        </label>
+
+        <div class="form-buttons">
+          <button class="button button-wide" type="submit">Создать заказ</button>
+          <button class="button button-ghost" type="button" id="closeModal">Отмена</button>
+        </div>
+      </form>
+
+      <div class="order-done" id="orderDone">
+        <p class="order-done-title">Заказ создан!</p>
+        <p class="meta dim">Перезвоним с номера +7 495 000 00 00</p>
       </div>
-    </form>
 
-    <div class="order-done" data-order-done hidden>
-      <p class="order-done__title">Заказ создан!</p>
-      <p class="meta meta--dim">Перезвоним с номера +7 495 000 00 00</p>
     </div>
-  </dialog>
+  </div>
+
+  <script src="js/script.js"></script>
 
 </body>
 </html>
