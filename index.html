@@ -183,5 +183,65 @@
     </div>
   </footer>
 
+  <div class="overlay" data-overlay></div>
+
+  <aside class="cart" data-cart aria-label="Корзина">
+    <div class="cart__head">
+      <h2 class="cart__title">Корзина</h2>
+      <button class="cart__close" type="button" data-action="close-cart" aria-label="Закрыть корзину">×</button>
+    </div>
+
+    <p class="cart__empty" data-cart-empty>
+      Пока пусто. Начните с «Утра», если не знаете, что выбрать.
+    </p>
+
+    <ul class="cart__list" data-cart-list></ul>
+
+    <div class="cart__foot">
+      <p class="cart__total">
+        <span class="meta">Итого</span>
+        <span data-cart-total>0 ₽</span>
+      </p>
+      <button class="button button--wide" type="button" data-action="checkout">Оформить заказ</button>
+    </div>
+  </aside>
+
+  <dialog class="modal" data-modal>
+    <form class="order-form" data-order-form>
+      <h2 class="order-form__title">Оформление заказа</h2>
+      <p class="meta meta--dim">Перезвоним в течение часа, чтобы подтвердить адрес</p>
+
+      <label class="field">
+        <span class="field__label">Имя</span>
+        <input class="field__input" type="text" name="firstName" required autocomplete="given-name">
+      </label>
+
+      <label class="field">
+        <span class="field__label">Фамилия</span>
+        <input class="field__input" type="text" name="lastName" required autocomplete="family-name">
+      </label>
+
+      <label class="field">
+        <span class="field__label">Адрес доставки</span>
+        <input class="field__input" type="text" name="address" required autocomplete="street-address">
+      </label>
+
+      <label class="field">
+        <span class="field__label">Телефон</span>
+        <input class="field__input" type="tel" name="phone" required placeholder="+7 900 000 00 00" autocomplete="tel">
+      </label>
+
+      <div class="order-form__buttons">
+        <button class="button button--wide" type="submit">Создать заказ</button>
+        <button class="button button--ghost" type="button" data-action="close-modal">Отмена</button>
+      </div>
+    </form>
+
+    <div class="order-done" data-order-done hidden>
+      <p class="order-done__title">Заказ создан!</p>
+      <p class="meta meta--dim">Перезвоним с номера +7 495 000 00 00</p>
+    </div>
+  </dialog>
+
 </body>
 </html>
